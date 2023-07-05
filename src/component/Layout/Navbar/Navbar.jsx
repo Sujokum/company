@@ -2,8 +2,9 @@
 import React from 'react'
 import { Disclosure} from '@headlessui/react'
 import Image from 'next/image'
+import {FaBars } from 'react-icons/fa'
 import Link from 'next/link'
-
+import {FaBarsStaggered} from 'react-icons/fa6'
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
@@ -21,7 +22,7 @@ function classNames(...classes) {
 const Navbar = () => {
   return (
     <>
-    <div className=' hidden md:flex px-[63px] py-[15px] items-center    justify-between' >
+    <div className=' hidden md:flex  md:px-[20px] xl:px-[63px] py-[15px] items-center    justify-between' >
         <div className='flex gap-3 font-poppins text-gray text-sm items-center ' >
             <Image src={"/assets/images/pakistanFlag.png"} width={100} height={100} alt='pakistan Flag' className='w-full'   />
             <h4>+92&nbsp;333&nbsp;1234&nbsp;567</h4>
@@ -32,8 +33,8 @@ const Navbar = () => {
         </div>
 
     </div>
-    <div className="min-h-full sticky top-0 bg-white/50 shadow-md w-full px-[63px]    ">
-        <Disclosure as="nav" className="w-full">
+    <div className="min-h-full sticky top-0 bg-white/50 shadow-md w-full  md:px-[20px] xl:px-[63px]    ">
+        <Disclosure as="nav" className="w-full sticky top-0">
           {({ open }) => (
             <>
               
@@ -58,7 +59,7 @@ const Navbar = () => {
                               item.current
                                 ? ' active:text-orange font-nasalization  hover:text-gray'
                                 : 'text-gray   hover:text-orange',
-                              'rounded-md px-3 text-gray  font-nasalization hover:text-orange py-2 text-md font-medium'
+                              'rounded-md px-3 text-gray  font-nasalization hover:text-orange py-2 max-md:text-sm md:text-sm xl:text-md font-medium'
                             )}
                             aria-current={item.current ? 'page' : undefined}
                           >
@@ -68,26 +69,26 @@ const Navbar = () => {
                       </div>
                     </div>
                   <div className="hidden md:block">
-                  <button className='px-[28px] py-[8px] bg-white shadow-md text-gray text-sm rounded-3xl' >Get a Quote</button>
+                  <button className=' md:px-[10px] md:py-[5px]  xl:px-[28px]  xl:py-[8px] bg-white shadow-md text-gray md:text-xs xl:text-sm rounded-3xl' >Get a Quote</button>
 
                             
                   </div>
-                  <div className="-mr-2 flex md:hidden">
+                  <div className="-mr-2 sticky top-0  bg-white flex md:hidden">
                     {/* Mobile menu button */}
                     <Disclosure.Button className="inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="sr-only">Open main menu</span>
                       {open ? (
-                     <h1>Icon1</h1>
+                     <FaBarsStaggered className="text-xl text-orange" />
 
                       ) : (
-                     <h1>Icon2</h1>
+                        <FaBars className="text-xl text-blue" />
                       )}
                     </Disclosure.Button>
                   </div>
                 </div>
               
 
-              <Disclosure.Panel className="md:hidden">
+              <Disclosure.Panel className="  md:hidden">
                 <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
                   {navigation.map((item) => (
                     <Disclosure.Button
