@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React , {useState , useEffect} from 'react'
 import { Disclosure} from '@headlessui/react'
 import Image from 'next/image'
 import {FaBars } from 'react-icons/fa'
@@ -20,6 +20,21 @@ function classNames(...classes) {
   }
 
 const Navbar = () => {
+  
+  const [active , setActive] = useState(false)
+  
+  const isActive = ()=>{
+    window.scrollY > 0 ? setActive(true) : setActive(false)
+
+}
+
+useEffect(()=>{
+  window.addEventListener('scroll' , isActive );
+
+  return ()=>{
+      window.removeEventListener('scroll' , isActive)
+  }
+},[])
   return (
     <>
     <div className=' hidden md:flex  md:px-[20px] xl:px-[63px] py-[15px] items-center    justify-between' >
@@ -33,7 +48,7 @@ const Navbar = () => {
         </div>
 
     </div>
-    <div className="min-h-full sticky top-0 bg-white/50 shadow-md w-full  md:px-[20px] xl:px-[63px]    ">
+    <div className={`min-h-full sticky top-0 ${active ? "bg-white" : "bg-white/50"}  shadow-md w-full z-50  md:px-[20px] xl:px-[63px] `}>
         <Disclosure as="nav" className="w-full sticky top-0">
           {({ open }) => (
             <>
@@ -42,14 +57,14 @@ const Navbar = () => {
                   <div className="flex justify-between  items-center">
                     <div className="flex-shrink-0">
                       <img
-                        className="w-full"
+                        className="w-full max-md:ms-3 "
                         src={"/assets/images/logo.png"}
                         alt="Your Company"
                       />
                     </div>
                     
                   </div>
-                  <div className="hidden md:block   md:mx-auto">
+                  <div className="hidden md:block  py-[15px]   md:mx-auto">
                       <div className="ml-10 flex    items-baseline space-x-4">
                         {navigation.map((item) => (
                           <Link
@@ -73,7 +88,7 @@ const Navbar = () => {
 
                             
                   </div>
-                  <div className="-mr-2 sticky top-0  bg-white flex md:hidden">
+                  <div className="-mr-2 sticky top-0 max-md:px-[20px]    bg-white flex md:hidden">
                     {/* Mobile menu button */}
                     <Disclosure.Button className="inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="sr-only">Open main menu</span>

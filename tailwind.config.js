@@ -28,6 +28,7 @@ module.exports = {
         'nasalization': ['nasalization', 'sans-serif'],
         'poppins': ['Poppins', 'sans-serif'],
         'steelfish': ['steelfish', 'sans-serif'],
+        'zuka': ['zuka', 'sans-serif'],
     
       },
       extend: {
