@@ -6,7 +6,6 @@ import Image from "next/image";
 import 'swiper/css';
 import "swiper/css";
 const TeamSlider = () => {
-    const swiper = useSwiper();
 
     const SwiperButtonNext = ({ children }) => {
         const swiper = useSwiper();
