@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 const OurPic = () => {
   return (
-    <div className='h-[1070px] flex gap-2  justify-between overflow-x-hidden  bg-blue w-full' >
+    <div className='h-[1070px] flex gap-2    justify-between overflow-x-hidden  bg-blue w-full' >
         <div className='flex max-sm:hidden max-2xl:w-[25%]   2xl:w-[20%] h-full  flex-col gap-2 overflow-x-hidden' >
             <div className='w-[387px] h-[427px] overflow-hidden ' >
                 <Image src={'/assets/images/ourImg1.png'} alt='ourTeam' width={500} height={500} className='w-full h-full block object-center object-cover' />
