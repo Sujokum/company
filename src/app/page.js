@@ -6,6 +6,7 @@ import Slider from "@/component/Slider/Slider"
 import OurPic from "@/component/OurPicSec/OurPic"
 import TeamSlider from "@/component/TeamSlider/TeamSlider"
 import WeFlow from "@/component/WeFlow/WeFlow"
+import Partnership from "@/component/Partnership/Partnership"
 import CaseStudy from "@/component/CaseStudy/CaseStudy"
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
     <WeFlow/>
     <OurPic/>
     <TeamSlider/>
+    <Partnership/>
     <CaseStudy/>
    </main>
   )

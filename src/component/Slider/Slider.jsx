@@ -6,6 +6,13 @@ import Image from "next/image";
 import 'swiper/css';
 import "swiper/css";
 const Slider = () => {
+
+  const sliderData = [
+    {
+      id : 1,
+      
+    }
+  ]
   return (
     <Swiper
     spaceBetween={50}

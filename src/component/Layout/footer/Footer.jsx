@@ -175,7 +175,7 @@ const Footer = () => {
           </svg>
 
           <div className = 'text-sm'  >
-            <p className="text-white text-lg font-poppins">infol@techalphalogix.com</p>
+            <p className="text-white text-lg font-poppins">info@techalphalogix.com</p>
           </div>
         </div>
         <div className=" w-full text-2xl flex justify-center text-white flex-wrap mt-auto items-center py-3  gap-3">

@@ -72,7 +72,10 @@ const CaseStudy = () => {
         },
     ]
   return (
-    <div className='w-full px-[59px] bg-gradient-to-b from-[#00B9AD] to-[#026861] pt-[9px] pb-[115px]' >
+    <div className='w-full relative px-[59px] bg-gradient-to-b from-[#00B9AD] to-[#026861] pt-[9px] pb-[165px]' >
+        <div className='absolute bottom-0 w-full left-0 ' >
+            <img src="/assets/images/aboveFoo.png" className='w-full' alt="footerImage" />
+        </div>
         <h1 className='font-steelfish font-bold text-[128px] text-white/50 ' >
             Case Study
         </h1>
@@ -85,7 +88,7 @@ const CaseStudy = () => {
                 <div className='w-full  h-[169px] bg-white rounded-[20px]' >
                 </div>
 
-                <div className='w-full text-center px-[38px]' >
+                <div className='w-full text-center px-[20px]' >
 
                     <h1 className='my-[11px] font-nasalization text-[34px] text-white ' >{val.heading}</h1>
                     <p className='text-white font-poppins text-[14px]  '>{val.para}</p>
