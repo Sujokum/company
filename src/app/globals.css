@@ -11,20 +11,20 @@ body{
 
 @font-face {
   font-family: 'nasalization';
-  src: url('/assets/fonts/NASALIZATION-RG.OTF') format('truetype');
+  src: url('../../public/fonts/NASALIZATION-RG.OTF') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'steelfish';
-  src: url('/assets/fonts/steelfish bd.ttf') format('truetype');
+  src: url('../../public/fonts/steelfish bd.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'zuka';
-  src: url('/assets/fonts/Zuka Doodle.ttf') format('truetype');
+  src: url('../../public/fonts/Zuka Doodle.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -34,7 +34,7 @@ body{
 
 /* BannerImg Start  */
 .HomeBg{
-  background-image: url('/assets/images/bannerBg.png')  ;
+  background-image: url('../../public/images/bannerBg.png')  ;
   background-repeat: no-repeat;
   background-position: 100% 100%;
   background-size: auto;
@@ -42,7 +42,7 @@ body{
 
 @media (min-width : 1280px) {
   .HomeBg{
-    background-image: url('/assets/images/bannerBg.png')  ;
+    background-image: url('../../public/images/bannerBg.png')  ;
     background-repeat: no-repeat;
     background-position: 100% 100%;
     background-size: 100%;

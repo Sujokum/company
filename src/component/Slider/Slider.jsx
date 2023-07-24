@@ -2,7 +2,18 @@
 import React from "react";
 import { Swiper, SwiperSlide  } from 'swiper/react';
 import { Autoplay } from "swiper/modules";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
+// import Image from "next/image";
+import bgWhiteShade from '../../../public/images/bgWhiteShade.png'
+import webGif from '../../../public/images/leptopGif.gif'
+import mobGif from '../../../public/images/mobile.gif'
+import uiuxGif from '../../../public/images/UIUX-01.gif'
+import graphicGif from '../../../public/images/graphic.gif'
+import dataGif from '../../../public/images/data.gif'
+import blockchainGif from '../../../public/images/blockchain.gif'
+import CMSGIF from '../../../public/images/CMS.gif'
+
+
 import 'swiper/css';
 import "swiper/css";
 const Slider = () => {
@@ -10,8 +21,55 @@ const Slider = () => {
   const sliderData = [
     {
       id : 1,
+      heading : "WEB",
+      heading2:"DEVELPOMENT",
+      para : "Unlock your online potential with our expert web development services. Our skilled team crafts SEO-optimized websites that drive organic traffic, boost search rankings, and deliver exceptional user experiences.",
+      image : webGif,
+
       
-    }
+    },
+    {
+      id : 2,
+      heading : "Mobile",
+      heading2:"DEVELPOMENT",
+      para : "Experience cutting-edge mobile development solutions that empower your business. Our skilled team delivers high-quality mobile applications tailored to your unique requirements, ensuring seamless performance and exceptional user experiences.",
+      image : mobGif,
+    },
+    {
+      id : 3,
+      heading : "UI/UX",
+      heading2:"DESIGN",
+      para : "Discover captivating user experiences and stunning interfaces with our UI/UX design services. We redefine digital interactions, crafting visually striking and intuitive designs that elevate your brand to new heights.",
+      image : uiuxGif,
+    },
+    {
+      id : 4,
+      heading : "GRAPHIC",
+      heading2:"DESIGN",
+      para : "Experience the power of visual storytelling through our exceptional graphic design services. Our talented team brings ideas to life with captivating visuals and innovative designs, leaving your brand standing out and your audience inspired.",
+      image : graphicGif,
+    },
+    {
+      id : 5,
+      heading : "DATA",
+      heading2:"SCIENCE",
+      para : "Uncover hidden insights in your data with our expert data science services. Our skilled team uses advanced analytics and machine learning to empower businesses with data-driven strategies for growth and optimization.",
+      image : dataGif,
+    },
+    {
+      id : 6,
+      heading : "BLOCKCHAIN",
+      heading2:"DEVELOPMENT",
+      para : "Revolutionizing industries with cutting-edge blockchain solutions. Experience secure, transparent, and efficient business processes with our expert team.",
+      image : blockchainGif,
+    },
+    {
+      id : 7,
+      heading : "CMS",
+      heading2:"DEVELOPMENT(WORDPRESS)",
+      para : "Streamline your content management with our expert CMS development. Effortlessly create, edit, and publish content for an exceptional user experience.",
+      image : CMSGIF,
+    },
   ]
   return (
     <Swiper
@@ -22,70 +80,38 @@ const Slider = () => {
     loop={true}
     
   >
-    <SwiperSlide>
-    <div className="h-[78vh]  relative w-full slide1  flex  HomeBg  justify-center items-center max-sm:px-[50px] max-md:px-[100px] md:px-[160px] xl:px-[150px] 2xl:px-[160px]" >
+    {
+      sliderData?.map((val)=>(
+
+      
+    <SwiperSlide key={val.id}>
+    <div className="h-[78vh]  relative w-full slide1    flex  HomeBg  justify-center items-center max-sm:px-[50px] max-md:px-[40px] md:px-[100px] xl:px-[150px] 2xl:px-[160px]" >
                 
                     <div className='absolute  -bottom-20   -z-20' >
-                    <Image src={'/assets/images/bgWhiteShade.png'} width={300} height={300} className="  lg:w-[40rem] xl:w-[50rem] 2xl:w-[85rem] " />
+                    <ExportedImage src={bgWhiteShade} className="   xl:w-[50rem] 2xl:w-[85rem] " />
                     </div>
-                    <div className='flex  relative justify-between items-center  h-full w-full ' >
-                        <div className="flex uppercase    max-sm:p-10  flex-col  font-steelfish  gap-3" >
-                        <h1 className='text-blue font-bold max-md:text-7xl md:text-8xl xl:text-9xl ' >WEB</h1>
-                        <h1 className='text-gray font-bold max-md:text-7xl md:text-8xl xl:text-9xl  ' >DEVELPOMENT</h1>
-                        <p className='  text-gray max-sm:w-[80%] max-md:w-[100%]  max-xl:w-[40%] xl:w-[40%]  2xl:w-[40%] font-poppins max-md:text-md md:text-md xl:text-md 2xl:text-lg ' >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                    <div className='flex  relative justify-between items-center  h-full w-full  ' >
+                        <div className="flex uppercase  max-md:w-full   max-sm:p-2  flex-col  font-steelfish  gap-3" >
+                        <h1 className='text-blue font-bold max-md:text-7xl md:text-8xl xl:text-9xl ' >{val.heading}</h1>
+                        <h1 className='text-gray font-bold break-words max-md:text-7xl md:text-8xl xl:text-9xl  ' >{val.heading2}</h1>
+                        <p className='  text-gray  max-md:w-[100%]  max-xl:w-[40%] xl:w-[40%]  2xl:w-[40%] font-poppins max-md:text-md md:text-md xl:text-md 2xl:text-lg ' >{val.para}</p>
                         <button className='mt-5 max-md:w-[160px] md:w-[160px] 2xl:w-[160px] px-[30px] font-poppins py-[9px] bg-orange shadow-md text-white text-[14px] rounded-3xl' >
                             Get a Quote</button>
                         </div>
-                        <div className="absolute -z-10 max-md:-right-0 max-md:-top-5  right-0 max-md:w-[250px]  md:w-[584px]" >
-                        <Image src={'/assets/images/leptopGif.gif'} width={500} height={500} className="w-full " />
+                        <div className="absolute -z-10 max-xl:-right-0 max-xl:-top-5  right-0 max-xl:w-[250px]  xl:w-[584px]" >
+                        <ExportedImage src={val?.image}  alt="images" className="w-full " />
                         </div>
                     </div>
 
     </div>
     </SwiperSlide>
-    <SwiperSlide>
-    <div className="h-[78vh]  relative w-full slide1  flex  HomeBg  justify-center items-center max-md:px-[100px] md:px-[160px] xl:px-[150px] 2xl:px-[160px]" >
-                
-                    <div className='absolute  -bottom-20   -z-20' >
-                    <Image src={'/assets/images/bgWhiteShade.png'} width={300} height={300} className="  lg:w-[40rem] xl:w-[50rem] 2xl:w-[85rem] " />
-                    </div>
-                    <div className='flex  relative justify-between items-center  h-full w-full ' >
-                        <div className="flex uppercase    max-sm:p-10  flex-col  font-steelfish  gap-3" >
-                        <h1 className='text-blue font-bold max-md:text-7xl md:text-8xl xl:text-9xl ' >Mobile</h1>
-                        <h1 className='text-gray font-bold max-md:text-7xl md:text-8xl xl:text-9xl  ' >DEVELPOMENT</h1>
-                        <p className='  text-gray max-sm:w-[80%] max-md:w-[100%]  max-xl:w-[40%] xl:w-[40%]  2xl:w-[40%] font-poppins max-md:text-md md:text-md xl:text-md 2xl:text-lg ' >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                        <button className='mt-5 max-md:w-[160px] md:w-[160px] 2xl:w-[160px] px-[30px] font-poppins py-[9px] bg-orange shadow-md text-white text-[14px] rounded-3xl' >
-                            Get a Quote</button>
-                        </div>
-                        <div className="absolute -z-10 max-md:-right-0 max-md:-top-3  right-0 max-md:w-[250px]  md:w-[584px]" >
-                        <Image src={'/assets/images/mob-dev.gif'} width={500} height={500} className="w-full " />
-                        </div>
-                    </div>
+    ))
+  }
 
-    </div>
-    </SwiperSlide>
 
-    <SwiperSlide>
-    <div className="h-[78vh]  relative w-full slide1  flex  HomeBg  justify-center items-center max-md:px-[100px] md:px-[160px] xl:px-[150px] 2xl:px-[160px]" >
-                
-                    <div className='absolute  -bottom-20   -z-20' >
-                    <Image src={'/assets/images/bgWhiteShade.png'} width={300} height={300} className="  lg:w-[40rem] xl:w-[50rem] 2xl:w-[85rem] " />
-                    </div>
-                    <div className='flex  relative  justify-between items-center  h-full w-full ' >
-                        <div className="flex uppercase    max-sm:p-4 max-md:p-10  flex-col  font-steelfish  gap-3" >
-                        <h1 className='text-blue font-bold max-md:text-7xl md:text-8xl xl:text-9xl ' >UI/UX</h1>
-                        <h1 className='text-gray font-bold max-md:text-7xl md:text-8xl xl:text-9xl  ' >Design</h1>
-                        <p className='  text-gray max-md:w-[100%]   max-xl:w-[40%] xl:w-[40%] font-poppins max-md:text-md md:text-md xl:text-md 2xl:text-lg ' >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                        <button className='mt-5 max-md:w-[160px] md:w-[160px] 2xl:w-[160px] px-[30px] font-poppins py-[9px] bg-orange shadow-md text-white text-[14px] rounded-3xl' >
-                            Get a Quote</button>
-                        </div>
-                        <div className="absolute -z-10 max-md:-right-0 max-md:-top-3  right-0 max-md:w-[250px]  md:w-[584px]" >
-                        <Image src={'/assets/images/UIUX-01.gif'} width={500} height={500} className="w-full " />
-                        </div>
-                    </div>
+ 
 
-    </div>
-    </SwiperSlide>
+    
    
    
 

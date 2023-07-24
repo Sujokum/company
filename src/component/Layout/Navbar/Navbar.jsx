@@ -1,7 +1,10 @@
 "use client"
 import React , {useState , useEffect} from 'react'
 import { Disclosure} from '@headlessui/react'
-import Image from 'next/image'
+import ExportedImage from "next-image-export-optimizer";
+// import Image from 'next/image'
+import pakistanFlag from '../../../../public/images/pakistanFlag.png'
+import logo from '../../../../public/images/logo.png'
 import {FaBars } from 'react-icons/fa'
 import Link from 'next/link'
 import {FaBarsStaggered} from 'react-icons/fa6'
@@ -39,12 +42,12 @@ useEffect(()=>{
     <>
     <div className=' hidden md:flex  md:px-[20px] xl:px-[63px] py-[15px] items-center    justify-between' >
         <div className='flex gap-3 font-poppins text-gray text-sm items-center ' >
-            <Image src={"/assets/images/pakistanFlag.png"} width={100} height={100} alt='pakistan Flag' className='w-full'   />
+            <ExportedImage src={pakistanFlag} width={100} height={100} alt='pakistaFlag' className='w-full'   />
             <h4>+92&nbsp;333&nbsp;1234&nbsp;567</h4>
         </div>
         <div className='flex items-center font-poppins gap-3' >
             <button className='px-[28px] py-[8px] bg-white shadow-md text-gray text-sm rounded-3xl' >News & Events</button>
-            <button className='px-[28px] py-[8px] bg-orange shadow-md text-white text-sm rounded-3xl' >Schedule Call</button>
+            <Link href={'/schedule-a-call'} className='px-[28px] py-[8px] bg-orange shadow-md text-white text-sm rounded-3xl' >Schedule Call</Link>
         </div>
 
     </div>
@@ -56,9 +59,11 @@ useEffect(()=>{
                 <div className="flex h-16 items-center  justify-between">
                   <div className="flex justify-between  items-center">
                     <div className="flex-shrink-0">
-                      <img
-                        className="w-full max-md:ms-3 "
-                        src={"/assets/images/logo.png"}
+                      <ExportedImage 
+                      width={500}
+                      height={500}
+                        className="w-[200px] max-md:ms-3 "
+                        src={logo}
                         alt="Your Company"
                       />
                     </div>
