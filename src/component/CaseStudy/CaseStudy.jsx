@@ -9,7 +9,7 @@ import Milk from '../../../public/images/Milk.png'
 import Calculator from '../../../public/images/calculator.png'
 import CanteenBaba from '../../../public/images/canteenBaba.png'
 import Wine from '../../../public/images/wine.png'
-import Foo from '../../../public/images/aboveFoo.png'
+import Foo from '/public/images/aboveFoo.png'
 const CaseStudy = () => {
     const data = [
         {
@@ -82,7 +82,7 @@ const CaseStudy = () => {
   return (
     <div className='w-full relative max-md:px-[30px] px-[59px] bg-gradient-to-b from-[#00B9AD] to-[#026861] pt-[9px] pb-[165px]' >
         <div className='absolute bottom-0 w-full left-0 ' >
-            <ExportedImage   src={Foo} className='w-full' alt="footerImage" />
+            <ExportedImage   src={Foo} width={200} height={200} className='w-full' alt="footerImage" />
         </div>
         <h1 className='font-steelfish font-bold max-md:text-[80px] text-[128px] text-white/50 ' >
             Case Study
@@ -94,7 +94,7 @@ const CaseStudy = () => {
                 
             <div key={val.id} className=' max-md:w-[95%] max-md:px-0 w-[368px] px-[7px] pt-[8px] pb-[20px] flex rounded-[20px] flex-col items-center min-h-[376px] bg-[#00B9AD]/50 ' >
                 <div className='w-full  h-[169px]' >
-                    <ExportedImage src = {val?.img} alt='images'  className = 'w-full h-full max-md:object-cover  rounded-[20px]'  />
+                    <ExportedImage src = {val?.img} alt='images' width={500} height={500}  className = 'w-full h-full max-md:object-cover  rounded-[20px]'  />
                 </div>
 
                 <div className='w-full text-center px-[20px]' >
