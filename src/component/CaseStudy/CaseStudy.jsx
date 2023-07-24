@@ -9,7 +9,7 @@ import Milk from '../../../public/images/Milk.png'
 import Calculator from '../../../public/images/calculator.png'
 import CanteenBaba from '../../../public/images/canteenBaba.png'
 import Wine from '../../../public/images/wine.png'
-import Foo from '/public/images/aboveFoo.png'
+import Foo from '/public/images/abovefoo.png'
 const CaseStudy = () => {
     const data = [
         {
