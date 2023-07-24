@@ -17,5 +17,6 @@ const nextConfig = {
             nextImageExportOptimizer_generateAndUseBlurImages: true,
           },
 }
+// "build": "next build && next export && next-image-export-optimizer",
 
 module.exports = nextConfig
