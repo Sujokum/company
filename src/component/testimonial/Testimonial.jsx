@@ -17,7 +17,7 @@ import './testimonial.css'
 const Testimonial = () => {
   const SwiperButtonNext = () => {
     const swiper = useSwiper();
-    return <div className="absolute     z-10 w-full  top-0 left-0   h-full   " > 
+    return <div className="absolute      z-10 w-full  top-0 left-0   h-full   " > 
     <div className=" flex items-center justify-between  h-[420px] w-full " >
 
     <button className="cursor-pointer" onClick={() => swiper.slidePrev()}><ExportedImage src={btnPre} alt="prewBtn"  className="w-8" /></button>
@@ -53,7 +53,7 @@ const Testimonial = () => {
     loop={true}
     
     
-    className='   max-xl:w-full w-[80%]  justify-center ps-[100px]  '
+    className='max-2xl:w-full 2xl:w-[80%]  justify-center ps-[100px]  '
     >
       <SwiperButtonNext/>
       <SwiperSlide  className=" flex justify-center  "   >

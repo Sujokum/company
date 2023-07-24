@@ -85,16 +85,16 @@ const Slider = () => {
 
       
     <SwiperSlide key={val.id}>
-    <div className="h-[78vh]  relative w-full slide1    flex  HomeBg  justify-center items-center max-sm:px-[50px] max-md:px-[40px] md:px-[100px] xl:px-[150px] 2xl:px-[160px]" >
+    <div className="h-[78vh]  relative w-full slide1 flex  HomeBg  justify-center items-center max-sm:px-[50px] max-md:px-[40px] md:px-[100px] xl:px-[150px] 2xl:px-[160px]" >
                 
                     <div className='absolute  -bottom-20   -z-20' >
                     <ExportedImage src={bgWhiteShade} className="   xl:w-[50rem] 2xl:w-[85rem] " />
                     </div>
                     <div className='flex  relative justify-between items-center  h-full w-full  ' >
                         <div className="flex uppercase  max-md:w-full   max-sm:p-2  flex-col  font-steelfish  gap-3" >
-                        <h1 className='text-blue font-bold max-md:text-7xl md:text-8xl xl:text-9xl ' >{val.heading}</h1>
-                        <h1 className='text-gray font-bold break-words max-md:text-7xl md:text-8xl xl:text-9xl  ' >{val.heading2}</h1>
-                        <p className='  text-gray  max-md:w-[100%]  max-xl:w-[40%] xl:w-[40%]  2xl:w-[40%] font-poppins max-md:text-md md:text-md xl:text-md 2xl:text-lg ' >{val.para}</p>
+                        <h1 className='text-blue font-bold max-md:text-7xl md:text-8xl xl:text-8xl 2xl:9xl ' >{val.heading}</h1>
+                        <h1 className='text-gray font-bold break-words   max-md:text-7xl md:text-7xl xl:text-7xl 2xl:9xl  ' >{val.heading2}</h1>
+                        <p className='  text-gray  max-md:w-[100%]  max-xl:w-[40%] xl:w-[40%]  2xl:w-[40%] font-poppins max-md:text-md md:text-md xl:text-[17px] 2xl:text-lg ' >{val.para}</p>
                         <button className='mt-5 max-md:w-[160px] md:w-[160px] 2xl:w-[160px] px-[30px] font-poppins py-[9px] bg-orange shadow-md text-white text-[14px] rounded-3xl' >
                             Get a Quote</button>
                         </div>
