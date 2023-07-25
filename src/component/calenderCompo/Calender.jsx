@@ -84,12 +84,50 @@ export default function Calender({selectedDay , setSelectedDay}) {
     setCurrentMonth(format(firstDayNextMonth, 'MMM-yyyy'))
   }
 
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const { name, email, message } = formData;
+
+    // Replace these values with your actual Email.js service details
+    const serviceID = 'yourEmailjsServiceId';
+    const templateID = 'yourEmailjsTemplateId';
+    const userID = 'yourEmailjsUserId';
+
+    emailjs
+      .send(serviceID, templateID, {
+        name,
+        email,
+        message,
+      }, userID)
+      .then(
+        (response) => {
+          alert('Email sent successfully!');
+          setFormData({ name: '', email: '', message: '' });
+        },
+        (error) => {
+          alert('Failed to send email. Please try again later.');
+        }
+      );
+  };
+
 
 
   return (
     <div className="pt-2">
       <div className="max-w-md px-4 mx-auto sm:px-7 md:max-w-full">
-        <div className="shadow md:grid p-3 md:divide-x md:divide-gray-200">
+        <div className="shadow  md:grid p-3 md:divide-x md:divide-gray-200">
           <div className="md:pr-14">
                 <h1 className='text-center text-xl text-gray' >Select Date</h1>
             <div className="flex  items-center">

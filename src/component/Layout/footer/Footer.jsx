@@ -1,9 +1,53 @@
 "use client"
-import React from 'react'
+import React  , {useState} from 'react'
+import toast, { Toaster } from 'react-hot-toast';
 import { Icon } from "@iconify/react";
+import emailjs from 'emailjs-com';
 const Footer = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const { name, email, message } = formData;
+
+    // Replace these values with your actual Email.js service details
+    const serviceID = 'service_sxihvj9';
+    const templateID = 'template_a4vi7yq';
+    const userID = 'user_8TicjaWdRixPuefwf7YVd';
+
+    
+
+
+    emailjs
+      .send(serviceID, templateID, {
+        name,
+        email,
+        message,
+      }, userID)
+      .then(
+        (response) => {
+          toast.success('Send Message Successfully')
+          setFormData({ name: '', email: '', message: '' });
+        },
+        (error) => {
+          toast.error('Failed to send email. Please try again later.')
+        }
+      );
+  };
   return (
     <section className="w-full flex flex-wrap  mt-auto  min-h-[404px] ">
+      <Toaster/>
     <div className=" boxShadow flex order-1  px-14   py-[50px] flex-col items-center h-full bg-[#424143] w-[100%]  md:w-[50%] lg:w-[40%]">
       <div className="w-full  ">
         <h1 className="text-blue font-steelfish text-4xl">Contact Us</h1>
@@ -17,34 +61,41 @@ const Footer = () => {
           <div className="flex flex-col py-4">
             <label className="text-white font-poppins text-lg">First Name</label>
             <input
-              className="bg-transparent border-t-0 border-r-0 border-l-0 border-b-2 border-white outline-none"
+              className="bg-transparent text-white border-t-0 border-r-0 border-l-0 border-b-2 border-white outline-none"
               type="text"
               placeholder="Name"
+              name='name'
+              value={formData.name}
+              onChange={handleChange}
             />
           </div>
 
           <div className="flex flex-col py-4">
             <label className="text-white text-lg font-poppins ">Email Address</label>
             <input
-              className="bg-transparent border-t-0 border-r-0 border-l-0 border-b-2 border-white outline-none"
+              className="bg-transparent text-white border-t-0 border-r-0 border-l-0 border-b-2 border-white outline-none"
               type="text"
               placeholder="Email Here ..."
+              name='email'
+              value={formData.email}
+              onChange={handleChange}
             />
           </div>
 
           <div className="flex flex-col py-4">
             <label className="text-white text-lg font-poppins ">Your Message</label>
-            <input
-              className="bg-transparent border-t-0 border-r-0 border-l-0 border-b-2 border-white outline-none"
+            <textarea
+              className="bg-transparent text-white border-t-0 border-r-0 border-l-0 border-b-2 border-white outline-none"
               type="text"
+
+              name='message'
+              value={formData.message}
               placeholder="Your Message.."
+              onChange={handleChange}
             />
-            <input
-              className="bg-transparent border-t-0 border-r-0 border-l-0 mt-3 border-b-2 border-white outline-none"
-              type="text"
-            />
+            
           </div>
-          <button className="mr-auto mt-3 bg-orange text-white font-poppins px-6 py-2 rounded-3xl text-xl">
+          <button onClick={handleSubmit}  className="mr-auto mt-3 bg-orange text-white font-poppins px-6 py-2 rounded-3xl text-xl">
             Send Message
           </button>
         </form>
