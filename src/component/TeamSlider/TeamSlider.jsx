@@ -58,11 +58,11 @@ const TeamSlider = () => {
     const SwiperButtonNext = ({ children }) => {
         const swiper = useSwiper();
         return <div className=" w-full   h-full flex justify-center items-center  " > 
-        <div className=" flex items-center justify-between  h-full max-md:w-[100%] max-md:items-center  w-1/2 " >
+        <div className=" flex items-center justify-between  h-full max-xl:w-[100%] xl:w-[80%]  max-md:items-center  2xl:w-1/2 " >
 
-        <button className="cursor-pointer" onClick={() => swiper.slidePrev()}><ExportedImage src={Pre} alt="prewBtn"  className="w-8" /></button>
+        <button className="cursor-pointer" onClick={() => swiper.slidePrev()}><ExportedImage src={Pre} alt="prewBtn"  className="w-[30px]" /></button>
          {children}
-        <button className="cursor-pointer" onClick={() => swiper.slideNext()}><ExportedImage src={Next} alt="prewBtn"  className="w-8" /></button>
+        <button className="cursor-pointer" onClick={() => swiper.slideNext()}><ExportedImage src={Next} alt="prewBtn"  className="w-[30px]" /></button>
         </div>
         
         </div>;
@@ -90,11 +90,11 @@ const TeamSlider = () => {
                         <ExportedImage src={val?.img} alt="team"  className="w-full" />        
                     </div>
                     <div className="flex max-xl:flex-col max-xl:items-center max-xl:w-[300px]  mt-[30px] justify-center gap-x-[15px] max-xl:ps-5  ps-24" >
-                            <div className="w-[297px] font-steelfish flex flex-col max-xl:items-center   " >
-                                <h1 className="text-blue max-2xl:text-[54px] 2xl:text-[64px]   " >{val.name}</h1>
+                            <div className=" max-2xl:min-w-[300px] 2xl:w-[297px] font-steelfish flex flex-col max-xl:items-center   " >
+                                <h1 className="text-blue  max-2xl:text-[45px] 2xl:text-[64px]   " >{val.name}</h1>
                                 <h3 className="text-orange max-2xl:text-[30px] 2xl:text-[40px] -mt-5    " >{val.role}</h3>
                             </div>
-                            <div className="max-2xl:w-[204px] max-xl:flex max-xl:flex-col max-xl:items-center 2xl:w-[250px] font-poppins text-[14px]  pt-[16px] ">
+                            <div className="max-2xl:w-[304px] max-xl:flex max-xl:flex-col max-xl:items-center 2xl:w-[250px] font-poppins text-[14px]  pt-[16px] ">
                                 <p className="max-xl:text-center" >
                                     {val.para}
                                 </p>
