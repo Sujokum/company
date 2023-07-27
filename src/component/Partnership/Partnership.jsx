@@ -24,8 +24,8 @@ const Partnership = () => {
 <>
     <div className='w-full overflow-x-hidden flex justify-center bg-blue ' >
     <div className='flex flex-col items-center  w-full py-[22px] ' >
-        <h1 className='  max-xl:text-[60px] xl:text-[70px] 2xl:text-[90px] max-md:text-[50px] font-steelfish text-center font-bold text-gray ' > <span className='text-white' > Partnership  </span> WE FOLLOW</h1>
-        <p className='text-center font-poppins max-md:w-[80%] max-xl:text-[14px]  max-md:px-4 xl:text-[15px] 2xl:text-[16px] text-white w-[430px]' >
+        <h1 className=' max-sm:text-[25px] max-xl:text-[60px] xl:text-[70px] 2xl:text-[90px] max-md:text-[50px] font-steelfish text-center font-bold text-gray ' > <span className='text-white' > Partnership  </span> WE FOLLOW</h1>
+        <p className='text-center max-sm:text-[10px] font-poppins max-md:w-[80%] max-xl:text-[14px]  max-md:px-4 xl:text-[15px] 2xl:text-[16px] text-white w-[430px]' >
             
 Our partnership approach is built on collaboration and mutual growth. We foster strong, long-lasting relationships, aligning our expertise with your vision to achieve shared success.
         </p>

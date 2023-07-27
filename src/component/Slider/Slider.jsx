@@ -66,7 +66,7 @@ const Slider = () => {
     {
       id : 7,
       heading : "CMS",
-      heading2:"DEVELOPMENT(WORDPRESS)",
+      heading2:<span className = 'flex max-2xl:flex-col' >DEVELOPMENT <span> {"(WORDPRESS)"} </span> </span>,
       para : "Streamline your content management with our expert CMS development. Effortlessly create, edit, and publish content for an exceptional user experience.",
       image : CMSGIF,
     },
@@ -92,13 +92,13 @@ const Slider = () => {
                     </div>
                     <div className='flex max-2xl:mb-[20px]  relative justify-between items-center    h-full 2xl:w-full  ' >
                         <div className="flex uppercase  max-md:w-full   max-sm:p-2  flex-col  font-steelfish  gap-3" >
-                        <h1 className='text-blue font-bold max-md:text-7xl md:text-8xl xl:text-7xl 2xl:9xl ' >{val.heading}</h1>
-                        <h1 className='text-gray font-bold break-words max-lg:2-full lg:w-1/2 2xl:w-full    max-md:text-7xl md:text-7xl xl:text-7xl 2xl:9xl  ' >{val.heading2}</h1>
-                        <p className='  text-gray  max-md:w-[100%]  max-xl:w-[40%] xl:w-[40%]  2xl:w-[40%] font-poppins max-md:text-md md:text-md xl:text-[17px] 2xl:text-lg ' >{val.para}</p>
+                        <h1 className='text-blue font-bold max-sm:text-3xl max-md:text-7xl md:text-8xl xl:text-7xl 2xl:9xl ' >{val.heading}</h1>
+                        <h1 className='text-gray font-bold max-sm:text-3xl break-words   max-sm:w-[90%] max-lg:w-full max-xl:w-[80%] xl:w-[60%]  2xl:w-full    max-md:text-7xl md:text-7xl xl:text-7xl 2xl:9xl  ' >{val.heading2}</h1>
+                        <p className='  text-gray   max-md:w-[100%]   max-xl:w-[40%] xl:w-[40%]  2xl:w-[40%] font-poppins max-md:text-md md:text-md xl:text-[17px] 2xl:text-lg ' >{val.para}</p>
                         <button className='mt-5 max-md:w-[160px] md:w-[160px] 2xl:w-[160px] px-[30px] font-poppins py-[9px] bg-orange shadow-md text-white text-[14px] rounded-3xl' >
                             Get a Quote</button>
                         </div>
-                        <div className="absolute -z-10 max-xl:-right-0 max-xl:-top-5  right-0 max-xl:w-[250px]  xl:w-[584px]" >
+                        <div className="absolute -z-10 max-xl:-right-0 max-xl:-top-5  right-0 max-xl:w-[250px] xl:w-[300px]  2xl:w-[584px]" >
                         <ExportedImage src={val?.image}  alt="images" className="w-full " />
                         </div>
                     </div>
@@ -108,15 +108,6 @@ const Slider = () => {
     ))
   }
 
-
- 
-
-    
-   
-   
-
-
-   
     
   </Swiper>
   )

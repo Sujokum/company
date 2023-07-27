@@ -28,7 +28,7 @@ const Testimonial = () => {
   };
   return (
     <div
-    className="w-full overflow-x-hidden max-lg:px-3  px-16  relative  justify-center items-center min-h-[484px] py-24 bg-gradient-to-b from-[#00B9AD] to-[#026861] "
+    className="w-full overflow-x-hidden max-lg:px-3 max-sm:px-[5px]  px-16  relative  justify-center items-center min-h-[484px] py-24 bg-gradient-to-b from-[#00B9AD] to-[#026861] "
     >
 
     <Swiper
@@ -61,7 +61,7 @@ const Testimonial = () => {
 
             <ExportedImage src={test1} className="w-[80px]" alt="john" />
         </div>
-      <div className='  w-[300px]  shadow-md -mt-10  mx-auto cursor-pointer px-[32px] h-[400px] py-8  rounded-xl  bg-[#00B9AD]/50 '>
+      <div className=' max-sm:w-[270px]  w-[300px]  shadow-md -mt-10  mx-auto cursor-pointer px-[32px] h-[400px] py-8  rounded-xl  bg-[#00B9AD]/50 '>
         <div className='flex  text-white   items-center py-3  flex-col'>
           <div className="w-full flex flex-col  items-center" >
             <h1 className = 'font-nasalization font-[16px]' >Mr.John Smith</h1>
@@ -84,7 +84,7 @@ const Testimonial = () => {
 
             <ExportedImage src={test2}  className="w-[80px]" alt="john" />
         </div>
-      <div className='  w-[300px]  shadow-md -mt-10  mx-auto cursor-pointer px-[32px] py-8 h-[400px]  rounded-xl  bg-[#00B9AD]/50 '>
+      <div className=' max-sm:w-[270px]  w-[300px]  shadow-md -mt-10  mx-auto cursor-pointer px-[32px] py-8 h-[400px]  rounded-xl  bg-[#00B9AD]/50 '>
         <div className='flex  text-white   items-center py-3  flex-col'>
           <div className="w-full flex flex-col  items-center" >
             <h1 className = 'font-nasalization font-[16px]' >Mr.John Smith</h1>
@@ -106,7 +106,7 @@ const Testimonial = () => {
 
             <ExportedImage src={test3}  className="w-[80px]" alt="john" />
         </div>
-      <div className='  w-[300px]  shadow-md -mt-10  mx-auto cursor-pointer px-[32px] py-8  rounded-xl h-[400px]  bg-[#00B9AD]/50 '>
+      <div className=' max-sm:w-[270px]  w-[300px]  shadow-md -mt-10  mx-auto cursor-pointer px-[32px] py-8  rounded-xl h-[400px]  bg-[#00B9AD]/50 '>
         <div className='flex  text-white   items-center py-3  flex-col'>
           <div className="w-full flex flex-col  items-center" >
             <h1 className = 'font-nasalization font-[16px]' >Mr.John Smith</h1>

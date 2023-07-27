@@ -84,15 +84,15 @@ const TeamSlider = () => {
        team?.map((val)=>(
            <SwiperSlide key={val.id} >
             <SwiperButtonNext>
-        <div className="   h-[800px] flex justify-center items-center " >
+        <div className=" max-sm:h-[550px]   h-[800px] flex justify-center items-center " >
                 <div className="flex flex-col items-center w-[720] " >
                     <div>
                         <ExportedImage src={val?.img} alt="team"  className="w-full" />        
                     </div>
-                    <div className="flex max-xl:flex-col max-xl:items-center max-xl:w-[300px]  mt-[30px] justify-center gap-x-[15px] max-xl:ps-5  ps-24" >
+                    <div className="flex max-xl:flex-col max-xl:items-center max-xl:w-[300px] max-sm:mt-[20px]  mt-[30px] justify-center gap-x-[15px] max-xl:ps-5  ps-24" >
                             <div className=" max-2xl:min-w-[300px] 2xl:w-[297px] font-steelfish flex flex-col max-xl:items-center   " >
-                                <h1 className="text-blue  max-2xl:text-[45px] 2xl:text-[64px]   " >{val.name}</h1>
-                                <h3 className="text-orange max-2xl:text-[30px] 2xl:text-[40px] -mt-5    " >{val.role}</h3>
+                                <h1 className="text-blue  max-sm:text-[30px] max-2xl:text-[45px] 2xl:text-[64px]   " >{val.name}</h1>
+                                <h3 className="text-orange max-sm:text-[25px] max-sm:mt-[5px] max-2xl:text-[30px] 2xl:text-[40px] -mt-5    " >{val.role}</h3>
                             </div>
                             <div className="max-2xl:w-[304px] max-xl:flex max-xl:flex-col max-xl:items-center 2xl:w-[250px] font-poppins text-[14px]  pt-[16px] ">
                                 <p className="max-xl:text-center" >

@@ -6,7 +6,7 @@ const WeFlow = () => {
     
     <div className='w-full  flex justify-center bg-blue ' >
         <div className='flex flex-col items-center max-2xl:w-full  2xl:w-[496px] py-[22px] ' >
-            <h1 className='max-sm:text-[40px] lg:text-[60px] xl:text-[50px] max-2xl:text-[90px] 2xl:text-[90px] max-md:text-[50px] md:text-[60px]  font-steelfish text-center font-bold text-gray ' > <span className='text-white' > PROCESS </span> WE FOLLOW</h1>
+            <h1 className='max-sm:text-[25px] lg:text-[60px] xl:text-[50px] max-2xl:text-[90px] 2xl:text-[90px] max-md:text-[50px] md:text-[60px]  font-steelfish text-center font-bold text-gray ' > <span className='text-white' > PROCESS </span> WE FOLLOW</h1>
             <p className='text-center font-poppins max-md:text-[14px] max-md:w-full text-[16px] text-white w-[430px]' >
             Meticulous planning and agile execution deliver exceptional results, exceeding expectations every step of the way.
             </p>

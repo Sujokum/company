@@ -84,7 +84,7 @@ const CaseStudy = () => {
         <div className='absolute bottom-0 w-full left-0 ' >
             <ExportedImage   src={Foo} width={200} height={200} className='w-full' alt="footerImage" />
         </div>
-        <h1 className='font-steelfish font-bold max-md:text-[80px] max-2xl:text-[80px] 2xl:text-[128px] text-white/50 ' >
+        <h1 className='font-steelfish max-sm:text-[30px] font-bold max-md:text-[80px] max-2xl:text-[80px] 2xl:text-[128px] text-white/50 ' >
             Case Study
         </h1>
         <div className='w-full flex justify-center flex-wrap max-md:gap-[20px] gap-[30px]' >

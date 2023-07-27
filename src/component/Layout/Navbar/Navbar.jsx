@@ -51,8 +51,8 @@ useEffect(()=>{
         </div>
 
     </div>
-    <div className={`min-h-full sticky top-0 ${active ? "bg-white" : "bg-white/50"}  shadow-md w-full z-50  md:px-[20px] xl:px-[63px] `}>
-        <Disclosure as="nav" className="w-full sticky top-0">
+    <div className={`min-h-full sticky top-[10px] ${active ? "bg-white" : "bg-white/50"}  shadow-md w-full z-50  md:px-[20px] xl:px-[63px] `}>
+        <Disclosure as="nav" className="w-full ">
           {({ open }) => (
             <>
               
